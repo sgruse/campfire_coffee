@@ -1,1 +1,42 @@
-/* This will be my CSS fire
+
+body {
+  background-color: lightblue;
+}
+
+img {
+    opacity: 0.4;
+    size: 2px;
+    text-align: center;
+
+}
+
+.introduction {
+  color: green;
+}
+
+.navbar {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.top_links {
+  display: inline;
+}
+
+.menu {
+  width: 100%;
+  background-color: lightblue;
+}
+
+.header_list {
+  width: 100%;
+}
+
+.fields {
+
+}
+
+#.navbar ul li a:hover {
+	color: #000;
+	background-color: #fff;
+	}
