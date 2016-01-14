@@ -10,6 +10,10 @@ img {
 
 }
 
+* {
+  font-family: arial;
+}
+
 .introduction {
   color: green;
 }
