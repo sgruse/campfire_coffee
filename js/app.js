@@ -44,7 +44,6 @@ var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:
         this.combined += this.totalBeans[i];
         }
     }                                            //TOAL BEANS FOR GRAPH
-
   }
   var pike = new Store('Pike Place Market', 14, 55, 1.2, 3.7);
   var hill = new Store('Capitol Hil', 32, 48, 3.2, 0.4);
