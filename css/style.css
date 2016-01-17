@@ -1,13 +1,91 @@
-
 body {
-  background-color: lightblue;
+  background-color: #5F6024;
 }
 
-img {
-    opacity: 0.4;
-    size: 2px;
-    text-align: center;
+header {
+  background-color: #F9DF8D;
+}
 
+.logo {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ol {
+  text-align: center;
+}
+
+li {
+  padding: 5px 15px 5px 15px;
+  display: inline;
+  text-align: center;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+}
+
+article {
+  /*margin-left: auto;
+  margin-right: auto;*/
+}
+
+article img {
+  width: 300px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.article_right {
+  float: right;
+  font-family: 'Roboto Slab', serif;
+  width: 70%
+
+}
+
+span {
+  font-size: 35px;
+}
+
+.header_right {
+  float: right;
+  font-family: 'Roboto Slab', serif;
+}
+
+.image_left {
+  width: 26%;
+}
+
+.article_left {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  width: 70%
+}
+
+.image_right {
+  width: 26%;
+  float: right;
+}
+
+.article_rightThree {
+  float: right;
+  font-family: 'Roboto Slab', serif;
+  width: 70%
+}
+
+.image_leftThree {
+  width: 26%;
+}
+/*.articleTwo {
+  float: right;
+  background-color: green;
+  height: 200px;
+  width: 200px;
 }
 
 .introduction {
@@ -25,7 +103,7 @@ img {
 
 .menu {
   width: 100%;
-  background-color: lightblue;
+  background-color: #796E24;
 }
 
 .header_list {
@@ -36,7 +114,32 @@ img {
 
 }
 
-#.navbar ul li a:hover {
-	color: #000;
-	background-color: #fff;
-	}
+div {
+	color: #f9D58D;
+	background-color: #f9Df8D;
+  text-align: center;
+}
+
+ol {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+div ol li {
+  text-align: center;
+  color: white;
+}
+
+.row {
+  color: red;
+}
+
+table {
+  border: solid 2px black;
+  background-color: green;
+}
+
+td {
+  border: solid 2px black;
+}*
