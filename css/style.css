@@ -1,42 +1,161 @@
-
 body {
-  background-color: lightblue;
+  background-color: #5F6024;
 }
 
-img {
-    opacity: 0.4;
-    size: 2px;
-    text-align: center;
-
+header {
+  background-color: #F9DF8D;
 }
 
-.introduction {
-  color: green;
+.logo {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.navbar {
-  padding-top: 20px;
+ol {
   text-align: center;
 }
 
-.top_links {
+li {
+  padding: 5px 15px 5px 15px;
   display: inline;
+  text-align: center;
 }
 
-.menu {
-  width: 100%;
-  background-color: lightblue;
+li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto Slab', serif;
 }
 
-.header_list {
-  width: 100%;
+.userlink {
+  text-decoration: none;
+  color:  #F9DF8D;
+  font-family: 'Roboto Slab', serif;
 }
 
-.fields {
+article {
+  /*margin-left: auto;
+  margin-right: auto;*/
+}
+
+article img {
+  width: 300px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
-#.navbar ul li a:hover {
-	color: #000;
-	background-color: #fff;
-	}
+.family {
+  float: right;
+  width: 350px;
+  height: 250px;
+  text-align: center;
+}
+
+.cont {
+  position: absolute;;
+    /*float: right;*/
+    margin: 0;
+    padding: 0;
+    width: 480px;
+    text-align: center;
+}
+
+.add {
+  display: block;
+  float: right;
+}
+
+.cf {
+  display: list-item;
+
+}
+
+div div ul {
+  list-style-type: none;
+}
+
+.fristStore {
+  float: left;
+}
+
+.firstAdd {
+  float: left;
+}
+
+div nav ul li p {
+  text-align: center;
+}
+
+div p {
+  font-family: cursive;
+  text-align: center;
+}
+
+.sidenav {
+    display: block;
+    position: static;
+    z-index: auto;
+    top: auto;
+    left: auto;
+    width: auto;
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+}
+
+.article_right {
+  float: right;
+  font-family: 'Roboto Slab', serif;
+  width: 70%
+
+}
+
+span {
+  font-size: 35px;
+}
+
+.header_right {
+  float: right;
+  font-family: 'Roboto Slab', serif;
+}
+
+.image_left {
+  width: 26%;
+}
+
+.article_left {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  width: 70%
+}
+
+.image_right {
+  width: 26%;
+  float: right;
+}
+
+.article_rightThree {
+  /*float: right;*/
+  font-family: 'Roboto Slab', serif;
+  width: 70%
+}
+
+.image_leftThree {
+  width: 26%;
+}
+
+.row {
+  color: black;
+}
+
+table {
+  border: solid 2px black;
+  /*background-color: green;*/
+}
+
+td {
+  border: solid 2px black;
+}

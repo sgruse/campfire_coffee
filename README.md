@@ -1,1 +1,4 @@
-This is my README file.  I will be updating regularly 
+This is my README file.  I will be updating regularly
+
+
+This is my final updated version of "Campfire Coffee".  This project contains all of the clients image files as well as a user facing page named "index.html" and a data page named "data.html".  There was a portion of this project in which I worked with a partner in order to have form fields entered on my data.html page.  On the data page, the form fields leave the client with space to enter in a new store location and receive sales projections on this new location to better understand the quantity of project needed.  Also, on the data page are all of the projections (total pounds required by hour and for the entire day) for all locations selling Campfire Coffee.  The logo I used for this project was created by fellow classmate David Heyduck.  

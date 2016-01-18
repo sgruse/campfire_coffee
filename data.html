@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html land="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Form feild</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
+    <header>
+    <h1>Projections of pounds needed per hour</h1>
+    <div>
+  </header>
+  <nav>
+    <a href="index.html" class="userlink">User Page</a>
+    <nav>
+    <form id="dataForm">
+      <fieldset>
+        <legend>"New location calculator"</legend>
 
-        <section id='table'></section>
+          <label for="co">New Company</label>
+          <input name="co" type="text" >
 
+          <label for="min">Min Amt Cust</label>
+          <input name="min" type="text" >
 
-      <script src="js/app.js"></script>
+          <label for="max">Max Amt Cust</label>
+          <input name="max" type="text" >
+
+          <label for="cups">Avg Cups</label>
+          <input name="cups" type="text" >
+          <br>
+          <label for="lbs">Avg Pounds</label>
+          <input name="lbs" type="text" >
+
+          <button id="data-button" type="submit">Data Submission</button>
+
+      </fieldset>
+    </form>
+  </div>
+
+            <section id="table"></section>
+            <!-- <section id='tableTwo'></section> -->
+            <script src="js/app.js"></script>
   </body>
 </html>

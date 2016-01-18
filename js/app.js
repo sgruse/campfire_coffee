@@ -1,16 +1,11 @@
 // TUESDAY REFACTOR
-var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm'];
-//nick
-// var pikeEl = document.createElement('h2');
-// pikeEl.textContent = 'Pike Place';
-// document.body.appendChild(pikeEl);
-// // Pike Place
+  var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm'];
 
- function Store(name, minHr, maxHr, avgCups, pounds) {
+  function Store(name, minHr, maxHr, avgCups, pounds) {
    this.loc = name;
    this.minHr = minHr;
    this.maxHr = maxHr;
-   this.avgCups = avgCups;
+   this.avgCups = avgCups;                   //Add a this.renderShopRow(); to my constructor which will call my new row
    this.pounds = pounds;
    this.hourlyCust = [];
    this.hourlyCups = [];
@@ -31,9 +26,7 @@ var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:
         this.hourlyCups[i] = Math.floor(this.avgCups * this.hourlyCust[i]);
 
         this.cupsBeansLbs[i] = (this.hourlyCups[i] / 20);
-
         this.go[i] = this.hourlyCust[i] * this.pounds;
-
         this.totalBeans[i] = this.go[i] + this.cupsBeansLbs[i];
 
       }
@@ -41,7 +34,7 @@ var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:
   };
     this.totalTotals = function() {
       for ( var i = 0; i < timeHr.length; i++) {
-        this.combined += this.totalBeans[i];
+        this.combined += Math.round(this.totalBeans[i]);
         }
     }                                            //TOAL BEANS FOR GRAPH
   }
@@ -53,10 +46,10 @@ var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:
   var site = new Store('Website Sales', 3, 6, 0, 6.7);
   var places = [pike, hill, library, lake, air, site];
 
+  var section = document.getElementById('table');
+  var table = document.createElement('table');
   var createTable = function() {
-    var section = document.getElementById('table');
-    var table = document.createElement('table');
-    var times = ['location', '6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'total']
+    var times = ['Location', '6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'Total']
     var row1 = document.createElement('tr');
     // CREATE TIMES
     for (var i = 0; i < times.length; i++) {
@@ -79,7 +72,7 @@ var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:
       for (var p = 0; p < timeHr.length; p++) {
         var allTotals = document.createElement('td');
         allTotals.textContent = places[m].totalBeans[p].toFixed(1);
-        console.log('hey');
+        //console.log('hey');
         row2.appendChild(allTotals);
       }
       var allTotals = document.createElement('td');
@@ -92,8 +85,7 @@ var timeHr = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:
     section.appendChild(table);
 }
 
-createTable();
-// var submissionData = [];  //Maybe
+createTable();                  //Creates my main total bean table
 
 //EVENT HANDLER
 function submissionForm(event) {     //when the event happens 'submit', triggers this funciton
@@ -111,8 +103,30 @@ console.log(newSubmission);
 newSubmission.generateHourlyCups();                 //Not needing to call this. Have to put newSubmission object into table
 
 places.push(newSubmission);
-
+createNewRow(newSubmission);
 //createTable();
 }
 //Event listener
 dataForm.addEventListener('submit', submissionForm);
+
+function createNewRow(newSubmission) {
+  //places[m].generateHourlyCups();
+  var row2 = document.createElement('tr');
+  var pl = document.createElement('th');
+  pl.textContent = places[places.length-1].loc;
+  row2.appendChild(pl);
+  row2.className = 'row'
+    // CREATES TOTAL BEANS PER HOUR
+  for (var p = 0; p < timeHr.length; p++) {
+    var allTotals = document.createElement('td');
+    allTotals.textContent = places[places.length-1].totalBeans[p].toFixed(1);
+    console.log('hey');
+    row2.appendChild(allTotals);
+  }
+  var allTotals = document.createElement('td');
+  allTotals.textContent = places[places.length-1].combined;
+  row2.appendChild(allTotals);
+
+  table.appendChild(row2);
+  section.appendChild(table);
+}
