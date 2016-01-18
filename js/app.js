@@ -34,7 +34,7 @@
   };
     this.totalTotals = function() {
       for ( var i = 0; i < timeHr.length; i++) {
-        this.combined += this.totalBeans[i];
+        this.combined += Math.round(this.totalBeans[i]);
         }
     }                                            //TOAL BEANS FOR GRAPH
   }
@@ -49,7 +49,7 @@
   var section = document.getElementById('table');
   var table = document.createElement('table');
   var createTable = function() {
-    var times = ['location', '6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'total']
+    var times = ['Location', '6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'Total']
     var row1 = document.createElement('tr');
     // CREATE TIMES
     for (var i = 0; i < times.length; i++) {
